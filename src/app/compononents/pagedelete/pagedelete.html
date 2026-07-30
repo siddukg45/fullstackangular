@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Simple Form</title>
+</head>
+<body>
+
+  <h2>Todo Form</h2>
+
+  <form>
+    
+    <label>Title:</label><br>
+    <input type="text" [(ngModel)]="deltodo.title"   name="title"  placeholder="Enter Title"><br><br>
+
+    <label>Description:</label><br>
+    <input type="text" [(ngModel)]="deltodo.description" name="description" placeholder="Enter Description"><br><br>
+
+    <label>Duration:</label><br>
+    <input type="date" [(ngModel)]="deltodo.duedate "name="duration" placeholder="Enter Duration"><br><br>
+
+  <h3>Are you sure you want to delete this todo task</h3>
+    <button type="submit" (click)="delsucc()">Delete</button>
+
+    <button (click)="discard()">Discard</button>
+
+  </form>
+
+</body>
+</html>
+

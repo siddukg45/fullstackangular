@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Simple Form</title>
+</head>
+<body>
+
+  <h2>Student Form</h2>
+
+  <form>
+    
+    <label>Title:</label><br>
+    <input type="text" [(ngModel)]="useredit.title"   name="title"  placeholder="Enter Title"><br><br>
+
+    <label>Description:</label><br>
+    <input type="text" [(ngModel)]="useredit.description" name="description" placeholder="Enter Description"><br><br>
+
+    <label>Duration:</label><br>
+    <input type="date" [(ngModel)]="useredit.duedate"  name="duration" placeholder="Enter Duration"><br><br>
+
+
+    <button type="submit" (click)="updtodo()">Submit</button>
+
+    <button (click)="discard()">Discard</button>
+
+  </form>
+
+</body>
+</html>
+

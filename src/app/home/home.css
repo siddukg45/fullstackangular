@@ -1,0 +1,92 @@
+.load{
+    background:linear-gradient(135deg,#4F46E5,#2563EB);
+    padding:20px;
+    padding-bottom:45px;
+    border-radius:10px 10px 0 0;
+    position:relative;
+}
+
+/* Welcome + Right Buttons */
+
+.top-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.top-header h1{
+    margin:0;
+    color:white;
+    font-size:32px;
+}
+
+/* Right buttons */
+
+.actions{
+  
+    display:flex;
+    gap:12px;
+}
+
+.load-btn,
+.load-log{
+    border:none;
+    padding:10px 18px;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:15px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.load-btn{
+    background:white;
+    color:#4169E1;
+}
+
+.load-log{
+    background:white;
+    color:red;
+}
+
+.load-btn:hover,
+.load-log:hover{
+    transform:translateY(-2px);
+    box-shadow:0 4px 10px rgba(0,0,0,.2);
+}
+
+/* Todo buttons */
+/* .sid{
+    background: linear-gradient(135deg,
+        #0F172A 0%,
+        #1E3A8A 40%,
+        #3B82F6 100%);
+} */
+.designsid{
+    position:absolute;
+    left:5px;
+    bottom:-40px;
+    display:flex;
+    gap:12px;
+     /* background: linear-gradient(135deg,
+        #0F172A 0%,
+        #1E3A8A 40%,
+        #3B82F6 100%); */
+}
+
+.newto{
+    background:white;
+    color:#4169E1;
+    border:none;
+    padding:10px 18px;
+    border-radius:8px;
+    font-weight:600;
+    cursor:pointer;
+    box-shadow:0 4px 10px rgba(0,0,0,.15);
+    transition:.3s;
+}
+
+.newto:hover{
+    background:#4169E1;
+    color:white;
+}

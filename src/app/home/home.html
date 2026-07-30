@@ -1,0 +1,45 @@
+
+
+<div class="load">
+
+    <div class="top-header">
+        <h1>Welcome 👋</h1>
+
+        <div >
+            @if(isstudent() == false)
+            {
+             <button (click)="changestatus(true)">Make Active</button>
+            }
+            @else {
+                <button (click)="changestatus(false)">Make Deactive</button>
+
+            }
+
+            @if(isstudent()==true)
+            {color
+                <p style="background-color:white ;color:green;">Student is Active</p>
+            }
+
+            @else {
+                <p style="background-color:white ;color: red;">Student is Inactive</p>
+            }
+                
+
+            
+        </div>
+
+        <div class="actions">
+            <button class="load-btn" (click)="loadProfile()">Load Profile</button>
+            <button class="load-log" (click)="logout()">Logout</button>
+        </div>
+    </div>
+    
+
+    <div class="designsid">
+        <button class="newto" (click)="navtodo()">Add New ToDo</button>
+        <button class="newto" (click)="loadtodo()">My ToDo</button>
+    </div>
+
+</div>
+
+

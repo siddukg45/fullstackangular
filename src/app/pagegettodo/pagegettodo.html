@@ -1,0 +1,56 @@
+  <h1>📝 My Todo List</h1>
+
+
+<a href="/home"> <- Back to HomePage</a>
+<table>
+  <thead>
+    <tr>
+    
+      <th>Title</th>
+      <th>Description</th>
+      <th>Status</th>
+      <th>Due Date</th>
+     <th>Actions</th>>
+    </tr>
+  </thead>
+
+  <tbody>
+
+    <tr *ngFor="let too of doo">
+    
+      <td>{{too.title}}</td>
+      <td>{{too.description}}</td>
+      <td>
+  <div
+    class="status-box"
+    [ngClass]="{
+      'pending': too.status === 'Pending',
+      'progress': too.status === 'In Progress',
+      'completed': too.status === 'Completed'
+    }">
+    {{ too.status }}
+  </div>
+  <br>
+
+  <div
+    *ngIf="too.status === 'In Progress'"
+    class="days-box"
+    [ngClass]="daysleft(too).includes('overdue') ? 'overdue' : 'remaining'">
+    {{ daysleft(too) }}
+  </div>
+</td>
+      <td>{{too.duedate | date : 'dd MMM yyyy'}}
+        
+      </td>
+      <td>
+        <button class="start-btn" *ngIf="too.status==='Pending'" (click)="Changestat(too) ; daysleft(too)">▷</button>
+        <button class="complete-btn" *ngIf="too.status==='In Progress'" (click)="MarkCompleted(too)">✓</button>
+        <button  *ngIf="too.status==='Completed'" disabled></button>
+        <button class="edit-btn" (dblclick)="navEdit(too.id!)">Edit</button>
+        <button class="delete-btn" (dblclick)="navdelete(too.id!)">Delete</button>
+      </td>
+
+    </tr>
+  </tbody>
+  
+</table>

@@ -1,0 +1,201 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    border-radius: 8px;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#f4f7fb;
+    padding:30px;
+    border-radius: 100px;
+}
+
+/* Heading */
+
+h1{
+    color:#1e3a8a;
+    margin-bottom:20px;
+    font-size:38px;
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+/* Back Link */
+
+a{
+    text-decoration:none;
+    color:#2563eb;
+    font-weight:500;
+}
+
+a:hover{
+    text-decoration:underline;
+}
+
+/* Table */
+
+table{
+    width:100%;
+    margin-top:25px;
+    border-collapse:collapse;
+    background:#fff;
+    border-radius:12px;
+    overflow:hidden;
+    text-align: center;
+    box-shadow:0 5px 18px rgba(0,0,0,.12);
+}
+
+thead{
+    background:#2563eb;
+    color:white;
+}
+
+th{
+    padding:18px;
+    font-size:12px;
+    font-weight:800;
+}
+
+td{
+    padding:18px;
+    border-bottom:1px solid #eee;
+}
+
+tbody tr:nth-child(even){
+
+    background:#fafafa;
+    
+}
+
+tbody tr:hover{
+    background:lightgrey;
+    transition:.3s;
+}
+tbody{
+    border-radius: 80px;
+    padding:80px;
+
+}
+
+/* Status Badge */
+
+.status{
+    padding:6px 14px;
+    border-radius:30px;
+    font-size:13px;
+    font-weight:600;
+}
+
+.pending{
+    background:#fff4cc;
+    color:#a16207;
+}
+
+.progress{
+    background:#dbeafe;
+    color:#1d4ed8;
+}
+
+.completed{
+    background:#dcfce7;
+    color:#15803d;
+}
+
+/* Buttons */
+
+button{
+    border:none;
+    padding:8px 16px;
+    border-radius:6px;
+    color:white;
+    cursor:pointer;
+    margin-right:8px;
+    transition:.25s;
+    font-size:14px;
+}
+.start-btn{
+    background-color:black;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+.complete-btn{
+    background:#16a34a;
+}
+
+.complete-btn:hover{
+    background:#15803d;
+}
+
+.edit-btn{
+    background:#2563eb;
+}
+
+.edit-btn:hover{
+    background:#1d4ed8;
+}
+
+.delete-btn{
+    background:#dc2626;
+}
+
+.delete-btn:hover{
+    background:#b91c1c;
+}
+.status-box,
+.days-box {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.pending {
+    background: #fff3cd;
+    color: orange;
+}
+
+.progress {
+    background: #dbeafe;
+    color: #2563eb;
+}
+
+.completed {
+    background: #d1fae5;
+    color: #15803d;
+}
+
+.remaining {
+    background: #fff7d6;
+    color: orange;
+}
+
+.overdue {
+    background: #fee2e2;
+    color: #dc2626;
+}
+
+/* Responsive */
+
+@media(max-width:900px){
+
+    body{
+        padding:15px;
+    }
+
+    table{
+        display:block;
+        overflow-x:auto;
+    }
+
+}

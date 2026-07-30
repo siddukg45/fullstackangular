@@ -1,0 +1,17 @@
+<h1>ToDo Form</h1>
+
+<br>
+
+<h2>Title</h2>
+<input type ="text" placeholder="Enter Title" [(ngModel)]="todo.title">
+<br>
+<h2>Description</h2>
+<input type ="text" placeholder="Enter Description" [(ngModel)]="todo.description">
+<br>
+<h2>Duration (in hrs)</h2>
+<input type ="date" placeholder="Enter Duration" [(ngModel)]="todo.duedate">
+<br>
+
+<br>
+
+<button (click)="savetodo()" >Add ToDo</button>

@@ -1,0 +1,29 @@
+
+<div class="login">
+<h1>Register form</h1>
+<input
+type="text"
+placeholder="Name"
+[(ngModel)]="user.name">
+
+<br><br>
+
+<input
+type="text"
+placeholder="Email"
+[(ngModel)]="user.email">
+
+<br><br>
+
+<input
+type="password"
+placeholder="Password"
+[(ngModel)]="user.password">
+
+<br><br>
+
+<button (click)="register()">
+Register
+</button>
+
+</div>
