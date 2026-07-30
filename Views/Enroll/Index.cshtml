@@ -1,0 +1,25 @@
+﻿@model List<Course.Models.Student>
+<!DOCTYPE.html>
+<head>
+  
+</head>
+
+<body>
+    <h1>Student Login</h1>
+    <br /><br />
+    <div class ="container" style="display:block">
+
+        <form asp-action="Index" method="post">
+
+            <label>Student Name</label><br />
+            <input name="name" placeholder="Enter Name" />
+            <br /><br />
+
+            <label>Student USN</label><br />
+                <input name="usn" placeholder="Enter USN" />
+
+                <button type="submit">Submit</button>   
+        </form>
+
+    </div>
+</body>

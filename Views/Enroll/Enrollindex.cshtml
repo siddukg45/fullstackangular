@@ -1,0 +1,71 @@
+﻿@model EnorllView
+
+@{
+    ViewData["Title"] = "Enroll in Course";
+}
+
+<h2>Enroll in Course</h2>
+
+@if (ViewBag.StudentId == null)
+{
+    <p style="color:red;">Student not selected</p>
+}
+
+<table border="1" cellpadding="10">
+    <thead>
+        <tr>
+            <th>Course Id</th>
+            <th>Title</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var course in Model.courses)
+        {
+            <tr>
+                <td>@course.CourseName</td>
+                <td>@course.Description</td>
+                <td>
+                    <form asp-action="EnrollIndex" method="post">
+                        <input type="hidden" name="StudentId" value="@ViewBag.StudentId" />
+                        <input type="hidden" name="CourseId" value="@course.Id" />
+
+                        <button type="submit">Enroll</button>
+                    </form>
+                </td>
+            </tr>
+        }
+
+        <div style="display:none">
+            <form asp-action="Enrolledcourses" method="get">
+                <table border="1" cellpadding="10">
+                    <thead>
+                        <tr>
+                            <th>StudentId</th>
+                            <th>StudentName</th>
+                            <th>CourseName</th>
+                            <th>EnrolledOn</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        @foreach (var item in Model.enrollments)
+                            {
+                                <tr>
+                                    <td>@item.Student.StudentName</td>
+                                    <td>@item.Student.StudentUsn</td>
+                                    <td>@item.Course.CourseName</td>
+                                    <td>@item.EnrolledDate</td>
+                                </tr>
+                            }
+
+                    </tbody>
+                </table>
+
+            </form>
+
+
+        </div>
+    </tbody>
+</table>

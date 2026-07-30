@@ -1,0 +1,71 @@
+﻿@model List<Course.Models.AvlCourse>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE.html>
+   
+    <html>
+    
+    <body>
+
+        <button type="button" onclick="showForm()">Add Course</button>
+        <div id="StudentDetails" class="container">
+            <h3>Student Details</h3>
+
+            <table border=" 1">
+                <thead>
+                    <tr>
+                        <th>Course Name</th>
+                        <th>CourseDescription</th>
+                    
+                    </thead>
+                </tr>
+                <tbody>
+
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@item.CourseName</td>
+                            <td>@item.Description</td>
+                            
+                        </tr>
+                    }
+                </tbody>
+
+
+            </table>
+        </div>
+        <br />
+        <br />
+        <div id="studentForm" style="display:none;">
+            <form asp-action="CourseCreate" method="post">
+
+                <input type="hidden" name="StudentId" />
+
+                <label>CourseName</label>
+                <input name="CourseName" placeholder="Enter name" />
+                <br /><br />
+
+                <label>Description</label>
+                <input name="Description" placeholder="Enter USN" />
+
+                <br /><br />
+
+
+                <button type="submit">Submit</button>
+
+
+            </form>
+        </div>
+        <script>
+
+                function showForm()
+                {
+                    document.getElementById("studentForm").style.display="block";
+                    document.getElementById("StudentDetails").style.display="none";
+                }
+        </script>
+    </body>
+</html>

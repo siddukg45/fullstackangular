@@ -1,0 +1,73 @@
+﻿
+@model List<Course.Models.Student>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE.html>
+   
+<html>
+    
+    <body>
+
+        <button type ="button" onclick="showForm()">Add Student</button> 
+        <div id="StudentDetails" class="container">
+            <h3>Student Details</h3>
+
+        <table border=" 1">
+            <thead>
+           <tr>
+            <th>Student Name</th>
+            <th>StudentUsn</th>
+            <th>StudentGrade</th>
+                </thead>
+                    </tr>
+                <tbody>
+
+                    @foreach(var item in Model)
+                        {
+                            <tr>
+                                <td>@item.StudentName</td>
+                                <td>@item.StudentUsn</td>
+                                <td>@item.StudentGrade</td>
+                            </tr>
+                        }
+                    </tbody>
+
+
+        </table>
+        </div>
+        <br /><br />
+        <div id="studentForm" style="display:none;">
+        <form asp-action="StudentCreate" method="post">
+
+            <input type="hidden" name="StudentId" />
+
+            <label>StudentName</label>
+            <input name="StudentName" placeholder="Enter name" />
+            <br /><br />
+
+            <label>StudentUsn</label>
+            <input name="StudentUsn" placeholder="Enter USN" />
+
+            <br /><br />
+
+            <label>StudentGrade</label>
+            <input name="StudentGrade" placeholder="Enter Grade" />
+
+            <button type ="submit">Submit</button>
+
+
+        </form>
+        </div>
+        <script>
+
+            function showForm()
+            {
+                document.getElementById("studentForm").style.display="block";
+                document.getElementById("StudentDetails").style.display="none";
+            }
+        </script>
+    </body>
+</html>
